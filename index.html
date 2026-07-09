@@ -30,7 +30,6 @@ nav{position:fixed;inset:0 0 auto;z-index:1000;background:rgba(7,15,23,.85);back
 nav .container{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:1180px;margin:0 auto;gap:22px}
 .nav-brand{display:flex;align-items:center;gap:12px}
 .nav-brand img{height:34px;width:auto}
-.nav-brand span{color:var(--ink);font-size:14px;font-weight:600;white-space:nowrap;opacity:.75}
 .nav-links{display:flex;align-items:center;list-style:none;gap:30px}
 .nav-links a{color:var(--ink);font-size:15px;cursor:pointer;transition:color .2s}
 .nav-links a:hover{color:var(--accent)}
@@ -54,7 +53,8 @@ section, .flow-block{padding:130px 0}
 .section-title{margin-top:16px;color:#fff;font-size:clamp(28px,3.8vw,42px);font-weight:800;letter-spacing:-.01em}
 .section-sub{margin:18px auto 0;max-width:700px;color:var(--ink);font-size:18px;line-height:1.9}
 .thesis{max-width:800px;margin:0 auto;color:#dfe1e3;font-size:19px;line-height:2}
-.thesis-wrap{text-align:center;margin-bottom:130px}
+.thesis-wrap{text-align:center;margin-bottom:170px}
+.music-disclaimer{max-width:700px;margin:26px auto 0;font-size:13.5px;color:#767a7e;line-height:1.8;font-style:italic}
 
 .style-overview{display:grid;grid-template-columns:1fr 1fr;gap:64px}
 .style-col{text-align:left}
@@ -73,22 +73,15 @@ section, .flow-block{padding:130px 0}
 .vfx-media{border-radius:16px;overflow:hidden;background:#000}
 .vfx-media video{width:100%;display:block}
 .vfx-caption{margin-top:22px;font-size:16px;line-height:1.9;color:var(--ink);text-align:center;max-width:680px;margin-left:auto;margin-right:auto}
-.vfx-badge{display:inline-flex;margin-top:16px;padding:7px 16px;border-radius:999px;background:rgba(226,195,134,.08);border:1px solid rgba(226,195,134,.3);color:var(--accent);font-size:12.5px;font-weight:700}
 
-.version-block{margin-bottom:110px}
-.version-block:last-child{margin-bottom:0}
-.version-tag{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:28px}
-.version-tag::before{content:"";width:5px;height:5px;border-radius:999px;background:var(--accent)}
-.actor-duo{display:grid;grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:start}
-.actor-main .actor-photo{width:170px;height:170px;object-fit:contain}
-.actor-support .actor-photo{width:110px;height:110px;object-fit:contain;opacity:.85}
-.actor-name{font-size:24px;font-weight:800;color:#fff;margin-top:20px}
-.actor-support .actor-name{font-size:18px;margin-top:14px}
+.actors-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:64px}
+.actor-photo{width:150px;height:150px;object-fit:contain}
+.actor-name{font-size:22px;font-weight:800;color:#fff;margin-top:20px}
 .actor-role{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:5px;color:var(--accent)}
 .actor-desc{font-size:16px;line-height:1.9;margin-top:14px;color:var(--ink)}
-.actor-support .actor-desc{font-size:14px}
 .actor-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.support-label{font-size:12px;color:#6c6f73;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.ambassador-note{margin-top:56px;text-align:center;font-size:15px;color:var(--ink);line-height:1.9;max-width:700px;margin-left:auto;margin-right:auto}
+.ambassador-note strong{color:var(--accent)}
 
 .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
 .pricing-card{border-radius:16px;padding:40px;background:rgba(255,255,255,.02);border:1px solid rgba(226,195,134,.18)}
@@ -100,9 +93,6 @@ section, .flow-block{padding:130px 0}
 .pricing-includes{list-style:none;margin-top:28px;display:grid;gap:10px}
 .pricing-includes li{font-size:16px;color:var(--ink);line-height:1.7}
 .pricing-note{margin-top:20px;font-size:13px;color:#5a5d61;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)}
-.addon-box{margin-top:28px;border:1px solid rgba(226,195,134,.18);border-radius:16px;padding:32px;background:rgba(226,195,134,.03);grid-column:1/-1}
-.addon-box h3{color:var(--accent);font-size:20px;font-weight:800;margin-bottom:12px}
-.addon-price{color:var(--accent);font-size:27px;font-weight:900;margin-top:10px}
 
 .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:56px}
 .tool-image{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px}
@@ -112,13 +102,32 @@ section, .flow-block{padding:130px 0}
 .tool-features li{position:relative;padding-left:26px;color:#c9ccd0;font-size:15px}
 .tool-features li::before{content:"—";position:absolute;left:0;color:var(--accent);font-weight:700}
 
-.music-float{position:fixed;bottom:26px;z-index:900;display:flex;flex-direction:column;gap:9px;opacity:0;pointer-events:none;transform:translateY(14px)}
+.music-float{position:fixed;bottom:26px;z-index:900;display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(14px)}
 .music-float.left-float{left:20px}
 .music-float.right-float{right:20px}
-.music-btn{display:flex;align-items:center;gap:9px;padding:11px 16px;border-radius:999px;border:1px solid rgba(226,195,134,.4);background:rgba(9,14,22,.9);color:var(--accent);cursor:pointer;font-family:var(--font);font-size:13.5px;font-weight:700;transition:all .25s;white-space:nowrap;backdrop-filter:blur(10px)}
-.music-btn:hover{transform:scale(1.03)}
-.lyrics-btn{background:transparent;border:1px solid rgba(226,195,134,.35);color:var(--accent);border-radius:999px;padding:7px 14px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--font)}
-.lyrics-btn:hover{background:rgba(226,195,134,.08)}
+.music-btn{
+  display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;
+  border:1px solid rgba(226,195,134,.4);background:rgba(9,14,22,.92);color:var(--accent);
+  cursor:pointer;font-family:var(--font);font-size:13.5px;font-weight:700;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s;
+  white-space:nowrap;backdrop-filter:blur(10px);box-shadow:0 4px 18px rgba(226,195,134,.08)
+}
+.music-btn:hover{transform:scale(1.06) translateY(-2px);border-color:rgba(226,195,134,.7);box-shadow:0 8px 26px rgba(226,195,134,.22)}
+.music-btn .note-icon{display:inline-block;transition:transform .3s}
+.music-btn.is-playing{border-color:rgba(226,195,134,.75);box-shadow:0 0 0 0 rgba(226,195,134,.5);animation:pulseGlow 2s ease-out infinite}
+.music-btn.is-playing .note-icon{animation:wiggle 1.1s ease-in-out infinite}
+@keyframes pulseGlow{
+  0%{box-shadow:0 4px 18px rgba(226,195,134,.15)}
+  50%{box-shadow:0 4px 26px rgba(226,195,134,.4)}
+  100%{box-shadow:0 4px 18px rgba(226,195,134,.15)}
+}
+@keyframes wiggle{
+  0%,100%{transform:rotate(0deg) scale(1)}
+  25%{transform:rotate(-12deg) scale(1.1)}
+  75%{transform:rotate(12deg) scale(1.1)}
+}
+.lyrics-btn{background:transparent;border:1px solid rgba(226,195,134,.35);color:var(--accent);border-radius:999px;padding:7px 15px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--font);transition:all .25s}
+.lyrics-btn:hover{background:rgba(226,195,134,.1);transform:translateY(-1px)}
 
 .modal-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s}
 .modal-overlay.active{opacity:1;pointer-events:all}
@@ -131,15 +140,14 @@ section, .flow-block{padding:130px 0}
 .fade-up{opacity:0;transform:translateY(28px)}
 
 @media(max-width:980px){
-  .style-overview,.actors-row,.tools-grid,.pricing-grid,.actor-duo{grid-template-columns:1fr;gap:40px}
+  .style-overview,.actors-row,.tools-grid,.pricing-grid{grid-template-columns:1fr;gap:40px}
 }
 @media(max-width:720px){
   section,.flow-block{padding:80px 0}
-  .thesis-wrap{margin-bottom:80px}
+  .thesis-wrap{margin-bottom:100px}
   .music-float.left-float{left:10px}
   .music-float.right-float{right:10px}
-  .music-btn{padding:9px 12px;font-size:12.5px}
-  .nav-brand span{display:none}
+  .music-btn{padding:10px 14px;font-size:12.5px}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(7,15,23,.98);padding:10px 32px 22px}
   .nav-links.active{display:flex}
   .nav-links a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -150,17 +158,17 @@ section, .flow-block{padding:130px 0}
 <body>
 
 <div class="music-float left-float" id="floatFun">
-  <button class="music-btn" id="playFun" onclick="toggleFun()"><span id="iconFun">▶</span> 8bit 趣味版</button>
+  <button class="music-btn" id="playFun" onclick="toggleFun()"><span class="note-icon" id="iconFun">▶</span> 遊戲風格 趣味版</button>
   <button class="lyrics-btn" onclick="openModal('fun')">歌詞</button>
 </div>
 <div class="music-float right-float" id="floatVibe">
-  <button class="music-btn" id="playVibe" onclick="toggleVibe()"><span id="iconVibe">▶</span> R&B 質感版</button>
+  <button class="music-btn" id="playVibe" onclick="toggleVibe()"><span class="note-icon" id="iconVibe">▶</span> R&B 質感版</button>
   <button class="lyrics-btn" onclick="openModal('vibe')">歌詞</button>
 </div>
 
 <div class="modal-overlay" id="modalFun" onclick="closeModal('modalFun',event)">
   <div class="modal-box">
-    <div class="modal-title">🎮 趣味 8bit 版 — 完整歌詞</div>
+    <div class="modal-title">🎮 遊戲風格趣味版 — 完整歌詞</div>
     <div class="modal-lyrics" id="lyricsF"></div>
     <button class="modal-close" onclick="document.getElementById('modalFun').classList.remove('active')">關閉</button>
   </div>
@@ -180,7 +188,6 @@ section, .flow-block{padding:130px 0}
   <div class="container">
     <div class="nav-brand">
       <img src="assets/nelson-logo.png" alt="Nelson Creative">
-      <span>Nelson Creative — LoveKart 樂福卡丁車</span>
     </div>
     <button class="nav-toggle" onclick="toggleNav()">☰</button>
     <ul class="nav-links" id="navLinks">
@@ -218,13 +225,14 @@ section, .flow-block{padding:130px 0}
         <p class="section-sub">這支影片的核心目標，是讓場地在客人入場前播放，透過音樂節奏與幽默畫面，讓所有年齡層的觀看者都能保持專注、快速吸收卡丁車的完整遊玩流程與安全規則。</p>
       </div>
       <p class="thesis fade-up">我們為 LoveKart 樂福卡丁車設計了兩種截然不同的影片風格，雙方可以從中選擇最符合品牌形象的版本，或是未來兩支都製作，針對不同受眾分開使用。</p>
+      <p class="music-disclaimer fade-up">＊目前提供試聽的音樂僅為快速預覽版本，歌詞與編曲內容尚未定稿，僅供雙方參考整體風格方向。</p>
     </div>
 
     <div class="style-overview" id="musicDemo">
       <div class="style-col fade-up">
-        <div class="eyebrow">趣味版 — 影片概述</div>
+        <div class="eyebrow">遊戲風格趣味版 — 影片概述</div>
         <h3 class="style-heading">像玩遊戲一樣<br><em>學規則</em></h3>
-        <p class="style-desc">以 8bit 像素遊戲世界觀為主軸，將卡丁車的每個規則對應成「過關任務」。角色、音效、台詞都充滿遊戲感，讓觀看者像在玩一場輕鬆的闖關遊戲，而不是被動聽規則說明。</p>
+        <p class="style-desc">以像素遊戲世界觀為主軸，將卡丁車的每個規則對應成「過關任務」。角色、音效、台詞都充滿遊戲感，讓觀看者像在玩一場輕鬆的闖關遊戲，而不是被動聽規則說明。</p>
         <div class="style-taglist">
           <span class="mini-tag">🎮 像素遊戲美學</span>
           <span class="mini-tag">🌟 全年齡層適用</span>
@@ -234,18 +242,18 @@ section, .flow-block{padding:130px 0}
           <button class="play-large" onclick="toggleFun()"><span id="iconFunLarge">▶</span> 播放</button>
           <div>
             <div class="style-song-label">主題曲</div>
-            <div class="style-song-name">8bit 趣味主題曲</div>
+            <div class="style-song-name">遊戲風格趣味主題曲</div>
           </div>
         </div>
       </div>
       <div class="style-col fade-up">
         <div class="eyebrow">質感版 — 影片概述</div>
         <h3 class="style-heading">沉浸式<br><em>POV 體驗</em></h3>
-        <p class="style-desc">以 POV 第一人稱視角搭配質感 R&B 音樂，讓觀看者感覺自己已經在現場體驗，畫面節奏更沉穩，適合想呈現品牌質感與電影氛圍的定位。</p>
+        <p class="style-desc">以 POV 第一人稱視角搭配質感 R&B 音樂拍攝，畫面盡可能貼近客人實際來到現場會看到的場景與流程，讓觀看者用最直覺的方式，快速且完整地理解整個遊玩體驗。</p>
         <div class="style-taglist">
           <span class="mini-tag">🎵 R&B 質感音樂</span>
           <span class="mini-tag">📱 POV 寫實視角</span>
-          <span class="mini-tag">💫 漸層柔和畫面</span>
+          <span class="mini-tag">💫 貼近真實場景</span>
         </div>
         <div class="style-song">
           <button class="play-large" onclick="toggleVibe()"><span id="iconVibeLarge">▶</span> 播放</button>
@@ -264,14 +272,13 @@ section, .flow-block{padding:130px 0}
     <div class="section-heading fade-up">
       <div class="eyebrow" style="justify-content:center">視覺特效範例</div>
       <h2 class="section-title">視覺特效概念測試</h2>
-      <p class="section-sub">目前呈現的是低畫質的概念測試版本，正式製作將以高畫質完整呈現，效果會更精細流暢。</p>
+      <p class="section-sub">目前呈現的是概念測試版本，正式製作將以高畫質完整呈現，效果會更精細流暢。</p>
     </div>
     <div class="vfx-wrap fade-up">
       <div class="vfx-media">
         <video autoplay muted loop playsinline src="assets/test-01.mp4"></video>
       </div>
-      <p class="vfx-caption">這次測試的是趣味版的風格概念：賽道與卡丁車本身維持真實樣貌，周圍場景則重新詮釋為知名遊戲「Minecraft」的方塊世界風格，讓觀眾一眼就能感受到遊戲化的趣味氛圍。質感版則保留鏡頭本身的構圖與燈光美感，暫不加入視覺特效。</p>
-      <div style="text-align:center"><span class="vfx-badge">低畫質預覽版本</span></div>
+      <p class="vfx-caption">這次測試的是遊戲風格趣味版的概念：賽道與卡丁車本身維持真實樣貌，周圍場景則重新詮釋為知名遊戲「Minecraft」的方塊世界風格，讓觀眾一眼就能感受到遊戲化的趣味氛圍。質感版則保留鏡頭本身的構圖與燈光美感，暫不加入視覺特效。</p>
     </div>
   </div>
 </section>
@@ -281,54 +288,30 @@ section, .flow-block{padding:130px 0}
     <div class="section-heading fade-up">
       <div class="eyebrow" style="justify-content:center">演員介紹</div>
       <h2 class="section-title">兩位主角，兩種氛圍</h2>
-      <p class="section-sub">兩個版本都會有小樂與 Veta 共同出演，只是主角與配角的角色會互換，呈現不同的敘事重心。</p>
     </div>
-
-    <div class="version-block fade-up">
-      <div class="version-tag">趣味版 · 主角：小樂</div>
-      <div class="actor-duo">
-        <div class="actor-main">
-          <img class="actor-photo" src="assets/xiaole.png" alt="小樂">
-          <div class="actor-name">小樂</div>
-          <div class="actor-role">主角 · 韓系活潑風格</div>
-          <p class="actor-desc">韓系可愛愛笑的形象，自帶親切感，能讓所有年齡層的觀看者快速產生好感，是趣味版的靈魂人物。</p>
-          <div class="actor-tags">
-            <span class="mini-tag">😄 韓系可愛風格</span>
-            <span class="mini-tag">⚡ 高親和力</span>
-          </div>
+    <div class="actors-row">
+      <div class="fade-up">
+        <img class="actor-photo" src="assets/xiaole.png" alt="小樂">
+        <div class="actor-name">小樂</div>
+        <div class="actor-role">遊戲風格趣味版主角 · 質感版配角</div>
+        <p class="actor-desc">韓系可愛愛笑的形象，自帶親切感，能讓所有年齡層的觀看者快速產生好感，在遊戲風格趣味版中擔任主角，質感版中則以配角亮相。</p>
+        <div class="actor-tags">
+          <span class="mini-tag">😄 韓系可愛風格</span>
+          <span class="mini-tag">⚡ 高親和力</span>
         </div>
-        <div class="actor-support">
-          <div class="support-label">配角</div>
-          <img class="actor-photo" src="assets/veta.png" alt="Veta">
-          <div class="actor-name">Veta</div>
-          <div class="actor-role">配角 · 模擬器高手</div>
-          <p class="actor-desc">在趣味版中擔任配角，帶出反差幽默感，襯托小樂的活潑主線。</p>
+      </div>
+      <div class="fade-up">
+        <img class="actor-photo" src="assets/veta.png" alt="Veta">
+        <div class="actor-name">Veta</div>
+        <div class="actor-role">質感版主角 · 遊戲風格趣味版配角</div>
+        <p class="actor-desc">美式酷感形象，是真正熱愛卡丁車運動的模擬器高手，在質感版中擔任主角，遊戲風格趣味版中則以配角現身，帶出反差幽默感。</p>
+        <div class="actor-tags">
+          <span class="mini-tag">😎 美式酷感風格</span>
+          <span class="mini-tag">🏎 模擬器高手</span>
         </div>
       </div>
     </div>
-
-    <div class="version-block fade-up">
-      <div class="version-tag">質感版 · 主角：Veta</div>
-      <div class="actor-duo">
-        <div class="actor-main">
-          <img class="actor-photo" src="assets/veta.png" alt="Veta">
-          <div class="actor-name">Veta</div>
-          <div class="actor-role">主角 · 美式酷感風格</div>
-          <p class="actor-desc">美式酷感形象，是真正熱愛卡丁車運動的模擬器高手，對駕駛節奏與線位掌握有自己的一套講究，讓質感版的每個畫面都更有說服力。</p>
-          <div class="actor-tags">
-            <span class="mini-tag">😎 美式酷感風格</span>
-            <span class="mini-tag">🏎 模擬器高手</span>
-          </div>
-        </div>
-        <div class="actor-support">
-          <div class="support-label">配角</div>
-          <img class="actor-photo" src="assets/xiaole.png" alt="小樂">
-          <div class="actor-name">小樂</div>
-          <div class="actor-role">配角 · 韓系活潑風格</div>
-          <p class="actor-desc">在質感版中擔任配角，為沉穩的 POV 氛圍增添一點輕鬆的互動感。</p>
-        </div>
-      </div>
-    </div>
+    <p class="ambassador-note fade-up">小樂與 Veta 兩位演員都願意在未來的宣傳活動中，持續擔任 <strong>LoveKart 樂福卡丁車</strong>場地宣傳大使之一，延續影片中的角色形象，讓品牌識別更加一致。</p>
   </div>
 </section>
 
@@ -341,16 +324,16 @@ section, .flow-block{padding:130px 0}
     </div>
     <div class="pricing-grid">
       <div class="pricing-card fade-up">
-        <div class="pricing-label">趣味版 · 8bit 風格</div>
+        <div class="pricing-label">遊戲風格 · 趣味版</div>
         <div class="pricing-name">趣味版完整製作</div>
         <div class="pricing-estimate">預估</div>
-        <div class="pricing-amount">NT$123,000</div>
-        <div class="pricing-subnote">扣除視覺特效：NT$100,000　·　扣除文字特效：NT$108,000　·　兩者皆不含：NT$85,000</div>
+        <div class="pricing-amount">NT$97,000</div>
+        <div class="pricing-subnote">扣除視覺特效：NT$85,000　·　扣除文字特效：NT$87,000　·　兩者皆不含：NT$75,000</div>
         <ul class="pricing-includes">
           <li>完整腳本 + 製作人統籌</li>
           <li>拍攝人員 + 器材租借</li>
           <li>演員：小樂（主角）、Veta（配角）</li>
-          <li>客製化 8bit 音樂授權</li>
+          <li>客製化主題曲音樂授權</li>
           <li>中英雙語版本</li>
           <li>視覺特效 + 文字特效升級</li>
         </ul>
@@ -360,13 +343,13 @@ section, .flow-block{padding:130px 0}
         <div class="pricing-label">質感版 · R&B 風格</div>
         <div class="pricing-name">質感版完整製作</div>
         <div class="pricing-estimate">預估</div>
-        <div class="pricing-amount">NT$100,000</div>
-        <div class="pricing-subnote">扣除文字特效：NT$85,000</div>
+        <div class="pricing-amount">NT$85,000</div>
+        <div class="pricing-subnote">扣除文字特效：NT$75,000</div>
         <ul class="pricing-includes">
           <li>完整腳本 + 製作人統籌</li>
           <li>拍攝人員 + 器材租借</li>
           <li>演員：Veta（主角）、小樂（配角）</li>
-          <li>客製化 R&B 音樂授權</li>
+          <li>客製化主題曲音樂授權</li>
           <li>中英雙語版本</li>
           <li>文字特效升級</li>
         </ul>
@@ -554,9 +537,19 @@ MINI車型的話也聽工作人員的
 let funPlaying=false, vibePlaying=false;
 const aF=document.getElementById('audioFun');
 const aV=document.getElementById('audioVibe');
+const btnFun=document.getElementById('playFun');
+const btnVibe=document.getElementById('playVibe');
 function setIcon(w,icon){document.getElementById('icon'+w).textContent=icon;const l=document.getElementById('icon'+w+'Large');if(l)l.textContent=icon;}
-function toggleFun(){if(funPlaying){aF.pause();funPlaying=false;setIcon('Fun','▶');}else{if(vibePlaying){aV.pause();vibePlaying=false;setIcon('Vibe','▶');}aF.play();funPlaying=true;setIcon('Fun','⏸');}}
-function toggleVibe(){if(vibePlaying){aV.pause();vibePlaying=false;setIcon('Vibe','▶');}else{if(funPlaying){aF.pause();funPlaying=false;setIcon('Fun','▶');}aV.play();vibePlaying=true;setIcon('Vibe','⏸');}}
+function toggleFun(){
+  if(funPlaying){aF.pause();funPlaying=false;setIcon('Fun','▶');btnFun.classList.remove('is-playing');}
+  else{if(vibePlaying){aV.pause();vibePlaying=false;setIcon('Vibe','▶');btnVibe.classList.remove('is-playing');}
+    aF.play();funPlaying=true;setIcon('Fun','⏸');btnFun.classList.add('is-playing');}
+}
+function toggleVibe(){
+  if(vibePlaying){aV.pause();vibePlaying=false;setIcon('Vibe','▶');btnVibe.classList.remove('is-playing');}
+  else{if(funPlaying){aF.pause();funPlaying=false;setIcon('Fun','▶');btnFun.classList.remove('is-playing');}
+    aV.play();vibePlaying=true;setIcon('Vibe','⏸');btnVibe.classList.add('is-playing');}
+}
 function openModal(t){document.getElementById(t==='fun'?'modalFun':'modalVibe').classList.add('active');}
 function closeModal(id,e){if(e.target===document.getElementById(id))document.getElementById(id).classList.remove('active');}
 function toggleNav(){document.getElementById('navLinks').classList.toggle('active');}
@@ -571,11 +564,11 @@ document.querySelectorAll('.fade-up').forEach(el=>{
 });
 
 gsap.to("#floatFun",{
-  opacity:1,y:0,duration:.6,ease:"power2.out",
+  opacity:1,y:0,duration:.6,ease:"power2.out",pointerEvents:"auto",
   scrollTrigger:{trigger:"#musicDemo",start:"top 80%",toggleActions:"play none none none"}
 });
 gsap.to("#floatVibe",{
-  opacity:1,y:0,duration:.6,ease:"power2.out",
+  opacity:1,y:0,duration:.6,ease:"power2.out",pointerEvents:"auto",
   scrollTrigger:{trigger:"#musicDemo",start:"top 80%",toggleActions:"play none none none"}
 });
 </script>
