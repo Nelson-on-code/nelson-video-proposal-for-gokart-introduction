@@ -80,7 +80,7 @@ section, .flow-block{padding:130px 0}
 .actor-role{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:5px;color:var(--accent)}
 .actor-desc{font-size:16px;line-height:1.9;margin-top:14px;color:var(--ink)}
 .actor-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.ambassador-note{margin-top:56px;text-align:center;font-size:15px;color:var(--ink);line-height:1.9;max-width:700px;margin-left:auto;margin-right:auto}
+.ambassador-note{margin-top:56px;text-align:center;font-size:15px;color:var(--ink);line-height:1.9;max-width:760px;margin-left:auto;margin-right:auto}
 .ambassador-note strong{color:var(--accent)}
 
 .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
@@ -101,6 +101,26 @@ section, .flow-block{padding:130px 0}
 .tool-features{list-style:none;display:grid;gap:10px}
 .tool-features li{position:relative;padding-left:26px;color:#c9ccd0;font-size:15px}
 .tool-features li::before{content:"—";position:absolute;left:0;color:var(--accent);font-weight:700}
+
+/* Trust section */
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:56px}
+.trust-item{text-align:left}
+.trust-num{font-size:34px;font-weight:900;color:var(--accent)}
+.trust-label{font-size:15px;color:#fff;font-weight:700;margin-top:10px}
+.trust-desc{font-size:14.5px;color:var(--ink);line-height:1.8;margin-top:8px}
+.trust-divider{height:1px;background:rgba(226,195,134,.14);margin:64px 0}
+.guarantee-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.guarantee-item{display:flex;gap:16px;align-items:flex-start}
+.guarantee-icon{color:var(--accent);font-size:20px;flex-shrink:0;margin-top:2px}
+.guarantee-text-title{color:#fff;font-size:15.5px;font-weight:700}
+.guarantee-text-desc{color:var(--ink);font-size:14.5px;margin-top:5px;line-height:1.8}
+
+/* CTA section */
+.cta-section{padding:110px 0 140px}
+.cta-box{max-width:720px;margin:0 auto;text-align:center}
+.cta-title{color:#fff;font-size:clamp(24px,3vw,32px);font-weight:800;margin-top:16px}
+.cta-text{margin-top:18px;font-size:17px;line-height:1.95;color:var(--ink)}
+.cta-signature{margin-top:32px;font-size:15px;color:var(--accent);font-weight:700}
 
 .music-float{position:fixed;bottom:26px;z-index:900;display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(14px)}
 .music-float.left-float{left:20px}
@@ -140,7 +160,7 @@ section, .flow-block{padding:130px 0}
 .fade-up{opacity:0;transform:translateY(28px)}
 
 @media(max-width:980px){
-  .style-overview,.actors-row,.tools-grid,.pricing-grid{grid-template-columns:1fr;gap:40px}
+  .style-overview,.actors-row,.tools-grid,.pricing-grid,.trust-grid,.guarantee-row{grid-template-columns:1fr;gap:40px}
 }
 @media(max-width:720px){
   section,.flow-block{padding:80px 0}
@@ -195,6 +215,7 @@ section, .flow-block{padding:130px 0}
       <li><a onclick="goTo('actors')">演員介紹</a></li>
       <li><a onclick="goTo('pricing')">報價</a></li>
       <li><a onclick="goTo('collab')">協作系統</a></li>
+      <li><a onclick="goTo('trust')">合作保障</a></li>
     </ul>
   </div>
 </nav>
@@ -287,16 +308,18 @@ section, .flow-block{padding:130px 0}
   <div class="container">
     <div class="section-heading fade-up">
       <div class="eyebrow" style="justify-content:center">演員介紹</div>
-      <h2 class="section-title">兩位主角，兩種氛圍</h2>
+      <h2 class="section-title">兩位主角，兩種典型客群</h2>
+      <p class="section-sub">小樂與 Veta 不只是演員，他們分別代表著樂福卡丁車最常見的兩種客人，讓觀看者能在影片中看見自己的影子。</p>
     </div>
     <div class="actors-row">
       <div class="fade-up">
         <img class="actor-photo" src="assets/xiaole.png" alt="小樂">
         <div class="actor-name">小樂</div>
         <div class="actor-role">遊戲風格趣味版主角 · 質感版配角</div>
-        <p class="actor-desc">韓系可愛愛笑的形象，自帶親切感，能讓所有年齡層的觀看者快速產生好感，在遊戲風格趣味版中擔任主角，質感版中則以配角亮相。</p>
+        <p class="actor-desc">小樂代表的是「本來不敢開快車」的那群人——曾經覺得卡丁車太刺激、太危險，直到真正坐上車、踩下油門的那一刻，才發現原來自己也可以享受速度感，從此徹底愛上。她的形象親切好笑，最能說服猶豫不決、還在觀望的潛在客人放心踏出第一步。</p>
         <div class="actor-tags">
           <span class="mini-tag">😄 韓系可愛風格</span>
+          <span class="mini-tag">🙈 從害怕到愛上</span>
           <span class="mini-tag">⚡ 高親和力</span>
         </div>
       </div>
@@ -304,14 +327,15 @@ section, .flow-block{padding:130px 0}
         <img class="actor-photo" src="assets/veta.png" alt="Veta">
         <div class="actor-name">Veta</div>
         <div class="actor-role">質感版主角 · 遊戲風格趣味版配角</div>
-        <p class="actor-desc">美式酷感形象，是真正熱愛卡丁車運動的模擬器高手，在質感版中擔任主角，遊戲風格趣味版中則以配角現身，帶出反差幽默感。</p>
+        <p class="actor-desc">Veta 代表的是本來就熱愛賽車運動、追求速度與操控感的核心玩家——她長期投入模擬器賽事並取得亮眼成績，對彎道、線位、油門煞車節奏都有自己的講究。她的角色能吸引真正熱愛駕駛、想挑戰自己極限的進階客群。</p>
         <div class="actor-tags">
           <span class="mini-tag">😎 美式酷感風格</span>
-          <span class="mini-tag">🏎 模擬器高手</span>
+          <span class="mini-tag">🏆 模擬器賽事成績</span>
+          <span class="mini-tag">🏎 核心賽車玩家</span>
         </div>
       </div>
     </div>
-    <p class="ambassador-note fade-up">小樂與 Veta 兩位演員都願意在未來的宣傳活動中，持續擔任 <strong>LoveKart 樂福卡丁車</strong>場地宣傳大使之一，延續影片中的角色形象，讓品牌識別更加一致。</p>
+    <p class="ambassador-note fade-up">兩種客群，一次打中——「小樂」讓還在猶豫的新手安心踏出第一步，「Veta」讓熱愛速度的老玩家找到共鳴。兩位演員也都願意在未來的宣傳活動中，持續擔任 <strong>LoveKart 樂福卡丁車</strong>場地宣傳大使之一，延續影片中的角色形象，讓品牌識別更加一致。</p>
   </div>
 </section>
 
@@ -386,6 +410,64 @@ section, .flow-block{padding:130px 0}
           <li>所有素材集中管理</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="trust">
+  <div class="container">
+    <div class="section-heading fade-up">
+      <div class="eyebrow" style="justify-content:center">合作保障</div>
+      <h2 class="section-title">為什麼可以放心把影片交給我們</h2>
+      <p class="section-sub">從腳本、拍攝到後製，每個階段都有清楚的流程與保障，讓整個合作過程透明、可追蹤、不用擔心來回拉扯。</p>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-item fade-up">
+        <div class="trust-num">01</div>
+        <div class="trust-label">腳本先確認，拍攝才開始</div>
+        <div class="trust-desc">腳本與分鏡會先經過雙方確認才進入實際拍攝，避免拍完才發現方向不對，重拍造成的時間與成本浪費。</div>
+      </div>
+      <div class="trust-item fade-up">
+        <div class="trust-num">02</div>
+        <div class="trust-label">全程可追蹤進度</div>
+        <div class="trust-desc">透過拍攝協作系統與後製雲端空間，隨時掌握拍攝與剪輯進度，不用擔心「交出去之後沒消息」。</div>
+      </div>
+      <div class="trust-item fade-up">
+        <div class="trust-num">03</div>
+        <div class="trust-label">修改留言直接標註</div>
+        <div class="trust-desc">後製階段可以在影片特定時間點直接留言反饋，不必再用文字描述「第幾分幾秒那裡怪怪的」，溝通更精準快速。</div>
+      </div>
+    </div>
+
+    <div class="trust-divider"></div>
+
+    <div class="guarantee-row">
+      <div class="guarantee-item fade-up">
+        <div class="guarantee-icon">◆</div>
+        <div>
+          <div class="guarantee-text-title">素材保存三個月</div>
+          <div class="guarantee-text-desc">後製協作雲端空間保證儲存三個月，交片後仍可回頭調整或補充需求。</div>
+        </div>
+      </div>
+      <div class="guarantee-item fade-up">
+        <div class="guarantee-icon">◆</div>
+        <div>
+          <div class="guarantee-text-title">版本比較不怕改壞</div>
+          <div class="guarantee-text-desc">每次修改都有版本紀錄可比對，確認修改方向正確，也能隨時retrieve舊版本。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box fade-up">
+      <div class="eyebrow" style="justify-content:center">還有問題嗎</div>
+      <h2 class="cta-title">有任何疑問或想調整的地方，直接跟我說就好</h2>
+      <p class="cta-text">這份提案還沒有到最終版本，不管是風格方向、演員安排、報價細節，或是任何你覺得不太對的地方，都可以直接跟我聯絡討論，我們一起把它調整到你最滿意的樣子。</p>
+      <div class="cta-signature">— Nelson Creative</div>
     </div>
   </div>
 </section>
