@@ -99,9 +99,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
 
 .actor-block{padding:64px 48px;position:relative;z-index:1}
 .actor-card{display:grid;grid-template-columns:160px 1fr;gap:24px;margin-top:28px;align-items:start}
-.actor-photo{width:160px;height:200px;object-fit:cover;border-radius:12px}
-.actor-photo.fun-photo{border:2px solid rgba(255,140,66,.4);box-shadow:0 0 30px rgba(255,120,71,.1)}
-.actor-photo.vibe-photo{border:2px solid rgba(160,220,255,.3);box-shadow:0 0 30px rgba(160,220,255,.08)}
+.actor-photo{width:160px;height:160px;object-fit:contain;border-radius:0;border:none;box-shadow:none;background:transparent}
 .actor-name{font-size:22px;font-weight:800;color:#fff}
 .actor-role{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
 .actor-role.fun{color:#ffb347}
@@ -147,7 +145,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
   .split-wrap{grid-template-columns:1fr}
   .tools-grid,.pricing-grid{grid-template-columns:1fr}
   .actor-card{grid-template-columns:120px 1fr}
-  .actor-photo{width:120px;height:160px}
+  .actor-photo{width:120px;height:120px}
 }
 @media(max-width:720px){
   .split-block,.actor-block,.vfx-block,.music-section-block{padding:48px 24px}
@@ -188,8 +186,8 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
   </div>
 </div>
 
-<audio id="audioFun" src="assets/music-8bit.mp3" loop></audio>
-<audio id="audioVibe" src="assets/music-rnb.mp3" loop></audio>
+<audio id="audioFun" src="assets/music-8bit.mp3" preload="none" loop></audio>
+<audio id="audioVibe" src="assets/music-rnb.mp3" preload="none" loop></audio>
 
 <nav>
   <div class="container">
@@ -273,7 +271,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
     <h3 class="split-title-fun" style="margin-top:14px">AI 視覺特效預覽</h3>
     <p class="split-text" style="margin-top:12px">以下為目前製作的視覺特效測試版本，正式影片中特效將更精細完整。</p>
     <div class="vfx-video-wrap">
-      <video autoplay loop muted playsinline src="assets/test-01.mp4"></video>
+      <video controls playsinline preload="none" src="assets/test-01.mp4"></video>
     </div>
   </div>
   <div class="vfx-block">
@@ -287,7 +285,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
     <div class="split-eyebrow-fun">演員介紹</div>
     <h3 class="split-title-fun" style="margin-top:14px">小樂 — 趣味版主角</h3>
     <div class="actor-card">
-      <img class="actor-photo fun-photo" src="assets/xiaole.png" alt="小樂">
+      <img class="actor-photo" src="assets/xiaole.png" alt="小樂">
       <div>
         <div class="actor-name">小樂</div>
         <div class="actor-role fun">趣味版主角 · 韓系活潑風格</div>
@@ -303,7 +301,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
     <div class="split-eyebrow-vibe">演員介紹</div>
     <h3 class="split-title-vibe" style="margin-top:14px">Veta — 質感版主角</h3>
     <div class="actor-card">
-      <img class="actor-photo vibe-photo" src="assets/veta.png" alt="Veta">
+      <img class="actor-photo" src="assets/veta.png" alt="Veta">
       <div>
         <div class="actor-name">Veta</div>
         <div class="actor-role vibe">質感版主角 · 美式酷感風格</div>
@@ -396,8 +394,8 @@ let funPlaying=false, vibePlaying=false;
 const aF=document.getElementById('audioFun');
 const aV=document.getElementById('audioVibe');
 function setIcon(w,icon){document.getElementById('icon'+w).textContent=icon;const l=document.getElementById('icon'+w+'Large');if(l)l.textContent=icon;}
-function toggleFun(){if(funPlaying){aF.pause();funPlaying=false;setIcon('Fun','▶');}else{if(vibePlaying){aV.pause();vibePlaying=false;setIcon('Vibe','▶');}aF.play();funPlaying=true;setIcon('Fun','⏸');}}
-function toggleVibe(){if(vibePlaying){aV.pause();vibePlaying=false;setIcon('Vibe','▶');}else{if(funPlaying){aF.pause();funPlaying=false;setIcon('Fun','▶');}aV.play();vibePlaying=true;setIcon('Vibe','⏸');}}
+function toggleFun(){if(funPlaying){aF.pause();funPlaying=false;setIcon('Fun','▶');}else{if(vibePlaying){aV.pause();vibePlaying=false;setIcon('Vibe','▶');}aF.play().catch(e=>console.log('播放失敗:',e));funPlaying=true;setIcon('Fun','⏸');}}
+function toggleVibe(){if(vibePlaying){aV.pause();vibePlaying=false;setIcon('Vibe','▶');}else{if(funPlaying){aF.pause();funPlaying=false;setIcon('Fun','▶');}aV.play().catch(e=>console.log('播放失敗:',e));vibePlaying=true;setIcon('Vibe','⏸');}}
 function openModal(t){document.getElementById(t==='fun'?'modalFun':'modalVibe').classList.add('active');}
 function closeModal(id,e){if(e.target===document.getElementById(id))document.getElementById(id).classList.remove('active');}
 function toggleNav(){document.getElementById('navLinks').classList.toggle('active');}
