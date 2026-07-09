@@ -11,14 +11,13 @@
 :root{
   --accent:#e2c386;
   --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
-  --ink:#9c9fa2;
+  --ink:#a7aaae;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:#07101a;color:var(--ink);line-height:1.75;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
-/* continuous background — no hard section seams */
 body{
   background:
     radial-gradient(circle at 15% 8%,rgba(226,195,134,.10),transparent 32%),
@@ -31,17 +30,16 @@ nav{position:fixed;inset:0 0 auto;z-index:1000;background:rgba(7,15,23,.85);back
 nav .container{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:1180px;margin:0 auto;gap:22px}
 .nav-brand{display:flex;align-items:center;gap:12px}
 .nav-brand img{height:34px;width:auto}
-.nav-brand span{color:var(--ink);font-size:13px;font-weight:600;white-space:nowrap;opacity:.75}
+.nav-brand span{color:var(--ink);font-size:14px;font-weight:600;white-space:nowrap;opacity:.75}
 .nav-links{display:flex;align-items:center;list-style:none;gap:30px}
-.nav-links a{color:var(--ink);font-size:14px;cursor:pointer;transition:color .2s}
+.nav-links a{color:var(--ink);font-size:15px;cursor:pointer;transition:color .2s}
 .nav-links a:hover{color:var(--accent)}
 .nav-toggle{display:none;border:none;background:transparent;color:var(--accent);width:40px;height:40px;font-size:22px;cursor:pointer}
 .container{max-width:1180px;margin:0 auto;padding:0 32px}
 
-.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .eyebrow::before{content:"";width:5px;height:5px;border-radius:999px;background:var(--accent)}
 
-/* ── Section rhythm: consistent vertical spacing, no borders between sections ── */
 section, .flow-block{padding:130px 0}
 
 .hero{min-height:100vh;display:flex;align-items:center;padding-top:112px}
@@ -52,89 +50,95 @@ section, .flow-block{padding:130px 0}
 .hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:36px}
 .tag{padding:9px 18px;border:1px solid rgba(226,195,134,.35);background:rgba(226,195,134,.06);border-radius:999px;color:var(--accent);font-size:13px;font-weight:600}
 
-.section-heading{max-width:780px;margin:0 auto 52px;text-align:center}
-.section-title{margin-top:16px;color:#fff;font-size:clamp(26px,3.6vw,40px);font-weight:800;letter-spacing:-.01em}
-.section-sub{margin:16px auto 0;max-width:680px;color:var(--ink);font-size:16px;line-height:1.85}
-.thesis{max-width:780px;margin:0 auto;color:#dfe1e3;font-size:18px;line-height:2;text-align:center}
+.section-heading{max-width:800px;margin:0 auto 52px;text-align:center}
+.section-title{margin-top:16px;color:#fff;font-size:clamp(28px,3.8vw,42px);font-weight:800;letter-spacing:-.01em}
+.section-sub{margin:18px auto 0;max-width:700px;color:var(--ink);font-size:18px;line-height:1.9}
+.thesis{max-width:800px;margin:0 auto;color:#dfe1e3;font-size:19px;line-height:2}
+.thesis-wrap{text-align:center;margin-bottom:130px}
 
-/* ── Style overview: no grid lines, no card borders — pure typographic split ── */
-.style-overview{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:64px}
+.style-overview{display:grid;grid-template-columns:1fr 1fr;gap:64px}
 .style-col{text-align:left}
-.style-heading{color:#fff;font-size:clamp(20px,2.4vw,28px);font-weight:800;line-height:1.25;margin-top:14px}
+.style-heading{color:#fff;font-size:clamp(22px,2.6vw,30px);font-weight:800;line-height:1.25;margin-top:14px}
 .style-heading em{color:var(--accent);font-style:normal}
-.style-desc{margin-top:14px;font-size:15px;line-height:1.85;color:var(--ink)}
-.style-taglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.mini-tag{padding:5px 12px;border-radius:999px;color:var(--accent);font-size:12px;font-weight:600;background:rgba(226,195,134,.07)}
-
-/* ── Music demo: minimal, no boxed card ── */
-.music-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:80px;text-align:center}
-.music-col h3{color:#fff;font-size:20px;font-weight:800;margin-top:12px}
-.play-large{display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:13px 26px;border-radius:999px;border:1.5px solid rgba(226,195,134,.45);background:transparent;color:var(--accent);cursor:pointer;font-size:14px;font-weight:700;font-family:var(--font);transition:all .25s}
+.style-desc{margin-top:16px;font-size:17px;line-height:1.9;color:var(--ink)}
+.style-taglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.mini-tag{padding:6px 13px;border-radius:999px;color:var(--accent);font-size:13px;font-weight:600;background:rgba(226,195,134,.07)}
+.style-song{display:flex;align-items:center;gap:14px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(226,195,134,.14)}
+.style-song-label{font-size:13px;color:var(--ink);font-weight:600}
+.style-song-name{color:#fff;font-size:16px;font-weight:700;margin-top:2px}
+.play-large{display:inline-flex;align-items:center;gap:9px;padding:11px 22px;border-radius:999px;border:1.5px solid rgba(226,195,134,.45);background:transparent;color:var(--accent);cursor:pointer;font-size:14px;font-weight:700;font-family:var(--font);transition:all .25s;white-space:nowrap}
 .play-large:hover{background:rgba(226,195,134,.08);transform:translateY(-1px)}
 
-/* ── VFX preview: video is the hero, no border box around it ── */
 .vfx-wrap{margin-top:48px;max-width:900px;margin-left:auto;margin-right:auto}
 .vfx-media{border-radius:16px;overflow:hidden;background:#000}
 .vfx-media video{width:100%;display:block}
-.vfx-caption{margin-top:20px;font-size:14px;line-height:1.8;color:var(--ink);text-align:center;max-width:600px;margin-left:auto;margin-right:auto}
+.vfx-caption{margin-top:22px;font-size:16px;line-height:1.9;color:var(--ink);text-align:center;max-width:680px;margin-left:auto;margin-right:auto}
+.vfx-badge{display:inline-flex;margin-top:16px;padding:7px 16px;border-radius:999px;background:rgba(226,195,134,.08);border:1px solid rgba(226,195,134,.3);color:var(--accent);font-size:12.5px;font-weight:700}
 
-/* ── Actors: side-by-side, no card frame, photo floats naturally ── */
-.actors-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:64px}
-.actor-photo{width:150px;height:150px;object-fit:contain}
-.actor-name{font-size:22px;font-weight:800;color:#fff;margin-top:20px}
-.actor-role{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:4px;color:var(--accent)}
-.actor-desc{font-size:14px;line-height:1.85;margin-top:12px;color:var(--ink)}
-.actor-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.version-block{margin-bottom:110px}
+.version-block:last-child{margin-bottom:0}
+.version-tag{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:28px}
+.version-tag::before{content:"";width:5px;height:5px;border-radius:999px;background:var(--accent)}
+.actor-duo{display:grid;grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:start}
+.actor-main .actor-photo{width:170px;height:170px;object-fit:contain}
+.actor-support .actor-photo{width:110px;height:110px;object-fit:contain;opacity:.85}
+.actor-name{font-size:24px;font-weight:800;color:#fff;margin-top:20px}
+.actor-support .actor-name{font-size:18px;margin-top:14px}
+.actor-role{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:5px;color:var(--accent)}
+.actor-desc{font-size:16px;line-height:1.9;margin-top:14px;color:var(--ink)}
+.actor-support .actor-desc{font-size:14px}
+.actor-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.support-label{font-size:12px;color:#6c6f73;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
 
-/* ── Pricing: cards ARE appropriate here (real comparison), keep subtle ── */
 .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
-.pricing-card{border-radius:16px;padding:38px;background:rgba(255,255,255,.02);border:1px solid rgba(226,195,134,.18)}
-.pricing-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.pricing-name{color:#fff;font-size:24px;font-weight:800;margin-top:10px}
-.pricing-amount{font-size:38px;font-weight:900;margin-top:18px;color:var(--accent)}
-.pricing-amount span{font-size:16px;font-weight:700;margin-left:4px;opacity:.65}
-.pricing-includes{list-style:none;margin-top:24px;display:grid;gap:9px}
-.pricing-includes li{font-size:14px;color:var(--ink);line-height:1.65}
-.pricing-note{margin-top:18px;font-size:12px;color:#5a5d61;padding-top:14px;border-top:1px solid rgba(255,255,255,.06)}
-.addon-box{margin-top:28px;border:1px solid rgba(226,195,134,.18);border-radius:16px;padding:30px;background:rgba(226,195,134,.03);grid-column:1/-1}
-.addon-box h3{color:var(--accent);font-size:19px;font-weight:800;margin-bottom:10px}
-.addon-price{color:var(--accent);font-size:26px;font-weight:900;margin-top:10px}
+.pricing-card{border-radius:16px;padding:40px;background:rgba(255,255,255,.02);border:1px solid rgba(226,195,134,.18)}
+.pricing-label{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.pricing-name{color:#fff;font-size:26px;font-weight:800;margin-top:10px}
+.pricing-estimate{font-size:12px;color:#8a8d91;font-weight:700;letter-spacing:.06em;margin-top:22px}
+.pricing-amount{font-size:40px;font-weight:900;margin-top:6px;color:var(--accent)}
+.pricing-subnote{margin-top:14px;font-size:12.5px;color:#767a7e;line-height:1.9}
+.pricing-includes{list-style:none;margin-top:28px;display:grid;gap:10px}
+.pricing-includes li{font-size:16px;color:var(--ink);line-height:1.7}
+.pricing-note{margin-top:20px;font-size:13px;color:#5a5d61;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)}
+.addon-box{margin-top:28px;border:1px solid rgba(226,195,134,.18);border-radius:16px;padding:32px;background:rgba(226,195,134,.03);grid-column:1/-1}
+.addon-box h3{color:var(--accent);font-size:20px;font-weight:800;margin-bottom:12px}
+.addon-price{color:var(--accent);font-size:27px;font-weight:900;margin-top:10px}
 
-/* ── Collab: images as the visual anchor, minimal frame ── */
 .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:56px}
 .tool-image{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px}
-.tool-title{color:#fff;font-size:21px;font-weight:800;margin-top:22px}
-.tool-desc{color:var(--ink);font-size:15px;line-height:1.85;margin-top:10px;margin-bottom:18px}
-.tool-features{list-style:none;display:grid;gap:9px}
-.tool-features li{position:relative;padding-left:26px;color:#c9ccd0;font-size:14px}
+.tool-title{color:#fff;font-size:22px;font-weight:800;margin-top:22px}
+.tool-desc{color:var(--ink);font-size:17px;line-height:1.9;margin-top:10px;margin-bottom:20px}
+.tool-features{list-style:none;display:grid;gap:10px}
+.tool-features li{position:relative;padding-left:26px;color:#c9ccd0;font-size:15px}
 .tool-features li::before{content:"—";position:absolute;left:0;color:var(--accent);font-weight:700}
 
-/* floating music controls */
-.music-float{position:fixed;bottom:26px;z-index:900;display:flex;flex-direction:column;gap:9px}
+.music-float{position:fixed;bottom:26px;z-index:900;display:flex;flex-direction:column;gap:9px;opacity:0;pointer-events:none;transform:translateY(14px)}
 .music-float.left-float{left:20px}
 .music-float.right-float{right:20px}
-.music-btn{display:flex;align-items:center;gap:9px;padding:10px 15px;border-radius:999px;border:1px solid rgba(226,195,134,.4);background:rgba(9,14,22,.9);color:var(--accent);cursor:pointer;font-family:var(--font);font-size:12.5px;font-weight:700;transition:all .25s;white-space:nowrap;backdrop-filter:blur(10px)}
+.music-btn{display:flex;align-items:center;gap:9px;padding:11px 16px;border-radius:999px;border:1px solid rgba(226,195,134,.4);background:rgba(9,14,22,.9);color:var(--accent);cursor:pointer;font-family:var(--font);font-size:13.5px;font-weight:700;transition:all .25s;white-space:nowrap;backdrop-filter:blur(10px)}
 .music-btn:hover{transform:scale(1.03)}
-.info-btn{background:transparent;border:1px solid rgba(255,255,255,.15);color:#777;border-radius:999px;width:26px;height:26px;font-size:12px;cursor:pointer}
+.lyrics-btn{background:transparent;border:1px solid rgba(226,195,134,.35);color:var(--accent);border-radius:999px;padding:7px 14px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--font)}
+.lyrics-btn:hover{background:rgba(226,195,134,.08)}
 
 .modal-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s}
 .modal-overlay.active{opacity:1;pointer-events:all}
 .modal-box{background:#0c131e;border-radius:20px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;padding:38px;border:1px solid rgba(226,195,134,.25)}
-.modal-title{font-size:19px;font-weight:800;color:var(--accent)}
-.modal-lyrics{font-size:14px;line-height:2.1;color:#c0c5cc;white-space:pre-wrap;margin-top:20px}
+.modal-title{font-size:20px;font-weight:800;color:var(--accent)}
+.modal-lyrics{font-size:15px;line-height:2.1;color:#c0c5cc;white-space:pre-wrap;margin-top:20px}
 .modal-lyrics strong{color:var(--accent);display:block;margin-top:18px;margin-bottom:4px;font-size:13px;letter-spacing:.05em}
 .modal-close{margin-top:24px;padding:9px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;cursor:pointer}
 
 .fade-up{opacity:0;transform:translateY(28px)}
 
 @media(max-width:980px){
-  .style-overview,.music-row,.actors-row,.tools-grid,.pricing-grid{grid-template-columns:1fr;gap:40px}
+  .style-overview,.actors-row,.tools-grid,.pricing-grid,.actor-duo{grid-template-columns:1fr;gap:40px}
 }
 @media(max-width:720px){
   section,.flow-block{padding:80px 0}
+  .thesis-wrap{margin-bottom:80px}
   .music-float.left-float{left:10px}
   .music-float.right-float{right:10px}
-  .music-btn{padding:8px 11px;font-size:11.5px}
+  .music-btn{padding:9px 12px;font-size:12.5px}
   .nav-brand span{display:none}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(7,15,23,.98);padding:10px 32px 22px}
   .nav-links.active{display:flex}
@@ -145,13 +149,13 @@ section, .flow-block{padding:130px 0}
 </head>
 <body>
 
-<div class="music-float left-float">
+<div class="music-float left-float" id="floatFun">
   <button class="music-btn" id="playFun" onclick="toggleFun()"><span id="iconFun">▶</span> 8bit 趣味版</button>
-  <button class="info-btn" onclick="openModal('fun')">ℹ</button>
+  <button class="lyrics-btn" onclick="openModal('fun')">歌詞</button>
 </div>
-<div class="music-float right-float">
+<div class="music-float right-float" id="floatVibe">
   <button class="music-btn" id="playVibe" onclick="toggleVibe()"><span id="iconVibe">▶</span> R&B 質感版</button>
-  <button class="info-btn" onclick="openModal('vibe')">ℹ</button>
+  <button class="lyrics-btn" onclick="openModal('vibe')">歌詞</button>
 </div>
 
 <div class="modal-overlay" id="modalFun" onclick="closeModal('modalFun',event)">
@@ -198,7 +202,7 @@ section, .flow-block{padding:130px 0}
         <span class="tag">雙語中英文版本</span>
         <span class="tag">客製化音樂</span>
         <span class="tag">兩種影片風格</span>
-        <span class="tag">AI 視覺特效</span>
+        <span class="tag">視覺特效</span>
         <span class="tag">專屬演員</span>
       </div>
     </div>
@@ -207,46 +211,49 @@ section, .flow-block{padding:130px 0}
 
 <section id="strategy">
   <div class="container">
-    <div class="section-heading fade-up">
-      <div class="eyebrow" style="justify-content:center">整體風格策略</div>
-      <h2 class="section-title">讓規則說明變成一支想主動看完的影片</h2>
-      <p class="section-sub">這支影片的核心目標，是讓場地在客人入場前播放，透過音樂節奏與幽默畫面，讓所有年齡層的觀看者都能保持專注、快速吸收卡丁車的完整遊玩流程與安全規則。</p>
+    <div class="thesis-wrap">
+      <div class="section-heading fade-up">
+        <div class="eyebrow" style="justify-content:center">整體風格策略</div>
+        <h2 class="section-title">讓規則說明變成一支想主動看完的影片</h2>
+        <p class="section-sub">這支影片的核心目標，是讓場地在客人入場前播放，透過音樂節奏與幽默畫面，讓所有年齡層的觀看者都能保持專注、快速吸收卡丁車的完整遊玩流程與安全規則。</p>
+      </div>
+      <p class="thesis fade-up">我們為 LoveKart 樂福卡丁車設計了兩種截然不同的影片風格，雙方可以從中選擇最符合品牌形象的版本，或是未來兩支都製作，針對不同受眾分開使用。</p>
     </div>
-    <p class="thesis fade-up">我們為 LoveKart 樂福卡丁車設計了兩種截然不同的影片風格，雙方可以從中選擇最符合品牌形象的版本，或是未來兩支都製作，針對不同受眾分開使用。</p>
 
-    <div class="style-overview">
+    <div class="style-overview" id="musicDemo">
       <div class="style-col fade-up">
         <div class="eyebrow">趣味版 — 影片概述</div>
         <h3 class="style-heading">像玩遊戲一樣<br><em>學規則</em></h3>
-        <p class="style-desc">以 8bit 像素遊戲世界觀為主軸，將卡丁車的每個規則對應成「過關任務」。角色、音效、台詞都充滿遊戲感。</p>
+        <p class="style-desc">以 8bit 像素遊戲世界觀為主軸，將卡丁車的每個規則對應成「過關任務」。角色、音效、台詞都充滿遊戲感，讓觀看者像在玩一場輕鬆的闖關遊戲，而不是被動聽規則說明。</p>
         <div class="style-taglist">
           <span class="mini-tag">🎮 像素遊戲美學</span>
           <span class="mini-tag">🌟 全年齡層適用</span>
           <span class="mini-tag">😂 幽默活潑台詞</span>
         </div>
+        <div class="style-song">
+          <button class="play-large" onclick="toggleFun()"><span id="iconFunLarge">▶</span> 播放</button>
+          <div>
+            <div class="style-song-label">主題曲</div>
+            <div class="style-song-name">8bit 趣味主題曲</div>
+          </div>
+        </div>
       </div>
       <div class="style-col fade-up">
         <div class="eyebrow">質感版 — 影片概述</div>
         <h3 class="style-heading">沉浸式<br><em>POV 體驗</em></h3>
-        <p class="style-desc">以 POV 第一人稱視角搭配質感 R&B 音樂，讓觀看者感覺自己已經在現場體驗。</p>
+        <p class="style-desc">以 POV 第一人稱視角搭配質感 R&B 音樂，讓觀看者感覺自己已經在現場體驗，畫面節奏更沉穩，適合想呈現品牌質感與電影氛圍的定位。</p>
         <div class="style-taglist">
           <span class="mini-tag">🎵 R&B 質感音樂</span>
           <span class="mini-tag">📱 POV 寫實視角</span>
           <span class="mini-tag">💫 漸層柔和畫面</span>
         </div>
-      </div>
-    </div>
-
-    <div class="music-row">
-      <div class="music-col fade-up">
-        <div class="eyebrow" style="justify-content:center">音樂展示</div>
-        <h3>8bit 趣味主題曲</h3>
-        <button class="play-large" onclick="toggleFun()"><span id="iconFunLarge">▶</span> 播放音樂</button>
-      </div>
-      <div class="music-col fade-up">
-        <div class="eyebrow" style="justify-content:center">音樂展示</div>
-        <h3>R&B 質感主題曲</h3>
-        <button class="play-large" onclick="toggleVibe()"><span id="iconVibeLarge">▶</span> 播放音樂</button>
+        <div class="style-song">
+          <button class="play-large" onclick="toggleVibe()"><span id="iconVibeLarge">▶</span> 播放</button>
+          <div>
+            <div class="style-song-label">主題曲</div>
+            <div class="style-song-name">R&B 質感主題曲</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -256,13 +263,15 @@ section, .flow-block{padding:130px 0}
   <div class="container">
     <div class="section-heading fade-up">
       <div class="eyebrow" style="justify-content:center">視覺特效範例</div>
-      <h2 class="section-title">AI 視覺特效預覽</h2>
-      <p class="section-sub">以下為目前製作的視覺特效測試版本，正式影片中特效將更精細完整，此片段自動循環播放。質感版則保留鏡頭本身的構圖與燈光美感，暫不加入視覺特效。</p>
+      <h2 class="section-title">視覺特效概念測試</h2>
+      <p class="section-sub">目前呈現的是低畫質的概念測試版本，正式製作將以高畫質完整呈現，效果會更精細流暢。</p>
     </div>
     <div class="vfx-wrap fade-up">
       <div class="vfx-media">
         <video autoplay muted loop playsinline src="assets/test-01.mp4"></video>
       </div>
+      <p class="vfx-caption">這次測試的是趣味版的風格概念：賽道與卡丁車本身維持真實樣貌，周圍場景則重新詮釋為知名遊戲「Minecraft」的方塊世界風格，讓觀眾一眼就能感受到遊戲化的趣味氛圍。質感版則保留鏡頭本身的構圖與燈光美感，暫不加入視覺特效。</p>
+      <div style="text-align:center"><span class="vfx-badge">低畫質預覽版本</span></div>
     </div>
   </div>
 </section>
@@ -272,26 +281,51 @@ section, .flow-block{padding:130px 0}
     <div class="section-heading fade-up">
       <div class="eyebrow" style="justify-content:center">演員介紹</div>
       <h2 class="section-title">兩位主角，兩種氛圍</h2>
+      <p class="section-sub">兩個版本都會有小樂與 Veta 共同出演，只是主角與配角的角色會互換，呈現不同的敘事重心。</p>
     </div>
-    <div class="actors-row">
-      <div class="fade-up">
-        <img class="actor-photo" src="assets/xiaole.png" alt="小樂">
-        <div class="actor-name">小樂</div>
-        <div class="actor-role">趣味版主角 · 韓系活潑風格</div>
-        <p class="actor-desc">韓系可愛愛笑的形象，自帶親切感，能讓所有年齡層的觀看者快速產生好感。</p>
-        <div class="actor-tags">
-          <span class="mini-tag">😄 韓系可愛風格</span>
-          <span class="mini-tag">⚡ 高親和力</span>
+
+    <div class="version-block fade-up">
+      <div class="version-tag">趣味版 · 主角：小樂</div>
+      <div class="actor-duo">
+        <div class="actor-main">
+          <img class="actor-photo" src="assets/xiaole.png" alt="小樂">
+          <div class="actor-name">小樂</div>
+          <div class="actor-role">主角 · 韓系活潑風格</div>
+          <p class="actor-desc">韓系可愛愛笑的形象，自帶親切感，能讓所有年齡層的觀看者快速產生好感，是趣味版的靈魂人物。</p>
+          <div class="actor-tags">
+            <span class="mini-tag">😄 韓系可愛風格</span>
+            <span class="mini-tag">⚡ 高親和力</span>
+          </div>
+        </div>
+        <div class="actor-support">
+          <div class="support-label">配角</div>
+          <img class="actor-photo" src="assets/veta.png" alt="Veta">
+          <div class="actor-name">Veta</div>
+          <div class="actor-role">配角 · 模擬器高手</div>
+          <p class="actor-desc">在趣味版中擔任配角，帶出反差幽默感，襯托小樂的活潑主線。</p>
         </div>
       </div>
-      <div class="fade-up">
-        <img class="actor-photo" src="assets/veta.png" alt="Veta">
-        <div class="actor-name">Veta</div>
-        <div class="actor-role">質感版主角 · 美式酷感風格</div>
-        <p class="actor-desc">美式酷酷的姐姐形象，真正會開卡丁車的實力派，曾獲得 F1 模擬器賽事獎項。</p>
-        <div class="actor-tags">
-          <span class="mini-tag">😎 美式酷感風格</span>
-          <span class="mini-tag">🏎 真實賽車手</span>
+    </div>
+
+    <div class="version-block fade-up">
+      <div class="version-tag">質感版 · 主角：Veta</div>
+      <div class="actor-duo">
+        <div class="actor-main">
+          <img class="actor-photo" src="assets/veta.png" alt="Veta">
+          <div class="actor-name">Veta</div>
+          <div class="actor-role">主角 · 美式酷感風格</div>
+          <p class="actor-desc">美式酷感形象，是真正熱愛卡丁車運動的模擬器高手，對駕駛節奏與線位掌握有自己的一套講究，讓質感版的每個畫面都更有說服力。</p>
+          <div class="actor-tags">
+            <span class="mini-tag">😎 美式酷感風格</span>
+            <span class="mini-tag">🏎 模擬器高手</span>
+          </div>
+        </div>
+        <div class="actor-support">
+          <div class="support-label">配角</div>
+          <img class="actor-photo" src="assets/xiaole.png" alt="小樂">
+          <div class="actor-name">小樂</div>
+          <div class="actor-role">配角 · 韓系活潑風格</div>
+          <p class="actor-desc">在質感版中擔任配角，為沉穩的 POV 氛圍增添一點輕鬆的互動感。</p>
         </div>
       </div>
     </div>
@@ -303,38 +337,40 @@ section, .flow-block{padding:130px 0}
     <div class="section-heading fade-up">
       <div class="eyebrow" style="justify-content:center">製作報價</div>
       <h2 class="section-title">完整製作費用</h2>
+      <p class="section-sub">以下為含完整特效的總價，兩個版本皆包含小樂與 Veta 兩位演員演出。</p>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card fade-up">
         <div class="pricing-label">趣味版 · 8bit 風格</div>
-        <div class="pricing-name">趣味版基本製作</div>
-        <div class="pricing-amount">NT$85,000<span>起</span></div>
+        <div class="pricing-name">趣味版完整製作</div>
+        <div class="pricing-estimate">預估</div>
+        <div class="pricing-amount">NT$123,000</div>
+        <div class="pricing-subnote">扣除視覺特效：NT$100,000　·　扣除文字特效：NT$108,000　·　兩者皆不含：NT$85,000</div>
         <ul class="pricing-includes">
           <li>完整腳本 + 製作人統籌</li>
           <li>拍攝人員 + 器材租借</li>
-          <li>演員：小樂</li>
+          <li>演員：小樂（主角）、Veta（配角）</li>
           <li>客製化 8bit 音樂授權</li>
           <li>中英雙語版本</li>
+          <li>視覺特效 + 文字特效升級</li>
         </ul>
-        <div class="pricing-note">含 AI 視覺特效版本：NT$108,000 起</div>
+        <div class="pricing-note">視覺特效以測試畫面之風格概念延伸製作。</div>
       </div>
       <div class="pricing-card fade-up">
         <div class="pricing-label">質感版 · R&B 風格</div>
-        <div class="pricing-name">質感版基本製作</div>
-        <div class="pricing-amount">NT$85,000<span>起</span></div>
+        <div class="pricing-name">質感版完整製作</div>
+        <div class="pricing-estimate">預估</div>
+        <div class="pricing-amount">NT$100,000</div>
+        <div class="pricing-subnote">扣除文字特效：NT$85,000</div>
         <ul class="pricing-includes">
           <li>完整腳本 + 製作人統籌</li>
           <li>拍攝人員 + 器材租借</li>
-          <li>演員：Veta</li>
+          <li>演員：Veta（主角）、小樂（配角）</li>
           <li>客製化 R&B 音樂授權</li>
           <li>中英雙語版本</li>
+          <li>文字特效升級</li>
         </ul>
         <div class="pricing-note">質感版以電影級攝影美學為核心，實際報價依場景調整。</div>
-      </div>
-      <div class="addon-box fade-up">
-        <h3>➕ 文字特效升級加購</h3>
-        <p>兩個版本皆可加購文字特效，大幅提升整體質感。</p>
-        <div class="addon-price">＋ NT$15,000</div>
       </div>
     </div>
   </div>
@@ -532,6 +568,15 @@ document.querySelectorAll('.fade-up').forEach(el=>{
     opacity:1,y:0,duration:.9,ease:"power2.out",
     scrollTrigger:{trigger:el,start:"top 85%",toggleActions:"play none none none"}
   });
+});
+
+gsap.to("#floatFun",{
+  opacity:1,y:0,duration:.6,ease:"power2.out",
+  scrollTrigger:{trigger:"#musicDemo",start:"top 80%",toggleActions:"play none none none"}
+});
+gsap.to("#floatVibe",{
+  opacity:1,y:0,duration:.6,ease:"power2.out",
+  scrollTrigger:{trigger:"#musicDemo",start:"top 80%",toggleActions:"play none none none"}
 });
 </script>
 </body>
