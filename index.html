@@ -45,7 +45,6 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
 .section-sub{margin:16px auto 0;max-width:740px;color:#9c9fa2;font-size:17px;line-height:1.85}
 .thesis-box{border:1px solid rgba(226,195,134,.35);background:rgba(226,195,134,.08);border-radius:14px;padding:40px;max-width:860px;margin:0 auto;color:#e2e4e5;font-size:18px;line-height:2}
 
-/* ── UNIFIED SPLIT LAYOUT — using brand accent gold, not clashing orange/blue ── */
 .split-wrap{display:grid;grid-template-columns:1fr 1fr}
 .split-block{position:relative;padding:72px 48px;overflow:hidden;background:linear-gradient(160deg,#0a1220,#0d1626);border-bottom:1px solid rgba(226,195,134,.12)}
 .split-block.fun{border-right:1px solid rgba(226,195,134,.1)}
@@ -67,9 +66,10 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
 
 .modal-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s}
 .modal-overlay.active{opacity:1;pointer-events:all}
-.modal-box{background:#0d1520;border-radius:16px;max-width:560px;width:100%;max-height:80vh;overflow-y:auto;padding:36px;border:1px solid rgba(226,195,134,.35)}
+.modal-box{background:#0d1520;border-radius:16px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;padding:36px;border:1px solid rgba(226,195,134,.35)}
 .modal-title{font-size:20px;font-weight:800;color:var(--accent)}
-.modal-lyrics{font-size:14px;line-height:2;color:#c0c5cc;white-space:pre-wrap;margin-top:20px}
+.modal-lyrics{font-size:14px;line-height:2.1;color:#c0c5cc;white-space:pre-wrap;margin-top:20px}
+.modal-lyrics strong{color:var(--accent);display:block;margin-top:18px;margin-bottom:4px;font-size:13px;letter-spacing:.05em}
 .modal-close{margin-top:24px;padding:10px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#fff;cursor:pointer}
 
 .music-section-block{padding:60px 48px;text-align:center;position:relative;z-index:1;background:linear-gradient(160deg,#0a1220,#0d1626);border-bottom:1px solid rgba(226,195,134,.1)}
@@ -146,14 +146,14 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
 <div class="modal-overlay" id="modalFun" onclick="closeModal('modalFun',event)">
   <div class="modal-box">
     <div class="modal-title">🎮 趣味 8bit 版 — 完整歌詞</div>
-    <div class="modal-lyrics" id="lyricsF">（尚未提供完整歌詞，請提供文字內容補上）</div>
+    <div class="modal-lyrics" id="lyricsF"></div>
     <button class="modal-close" onclick="document.getElementById('modalFun').classList.remove('active')">關閉</button>
   </div>
 </div>
 <div class="modal-overlay" id="modalVibe" onclick="closeModal('modalVibe',event)">
   <div class="modal-box">
     <div class="modal-title">🎵 質感 R&B 版 — 完整歌詞</div>
-    <div class="modal-lyrics" id="lyricsV">（尚未提供完整歌詞，請提供文字內容補上）</div>
+    <div class="modal-lyrics" id="lyricsV"></div>
     <button class="modal-close" onclick="document.getElementById('modalVibe').classList.remove('active')">關閉</button>
   </div>
 </div>
@@ -337,6 +337,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
     </div>
     <div class="tools-grid">
       <div class="tool-card">
+        <img class="tool-image" src="assets/08-post-production-collab.webp" alt="後製協作雲端空間">
         <div class="tool-content">
           <h3 class="tool-title">後製協作雲端空間</h3>
           <p class="tool-desc">保證儲存三個月，具備完整協作功能：</p>
@@ -348,6 +349,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
         </div>
       </div>
       <div class="tool-card">
+        <img class="tool-image" src="assets/09-shooting-collab-system.webp" alt="Nelson Creative 拍攝協作系統">
         <div class="tool-content">
           <h3 class="tool-title">Nelson Creative 拍攝協作系統</h3>
           <p class="tool-desc">自行開發的拍攝協作系統：</p>
@@ -363,6 +365,149 @@ nav .container{display:flex;align-items:center;justify-content:space-between;pad
 </section>
 
 <script>
+document.getElementById('lyricsF').innerHTML = `<strong>【開場】</strong>
+歡迎來到樂福卡丁車～在你衝去飆速之前～先跟公主一樣乖乖聽完這段話～不然等一下摔進坑裡，我們可不負責喔
+
+<strong>【第一階段：置物櫃關卡】</strong>
+現在進入第一關：置物櫃關卡～先把口袋裡的東西通通拿出來～手機呀、鑰匙呀，通通拿出來
+白色置物櫃免費用～藍色的呢，投個20塊金幣進去～
+關上門，逆時針轉一圈，就像轉水管一樣，這樣才能拿到鑰匙喔～
+如果東西掉進跑道裡面，不管是鈔票、手機還是眼鏡～弄壞弄丟我們不負責喔～
+
+<strong>【第二階段：裝備準備關】</strong>
+第二關登場：裝備準備關～胸前或手臂不要自己裝GoPro喔～不然變成路易吉手上的水管炮，很危險～
+安全帽上有架子可以放，沒有的話櫃檯有賣～
+頭髮長的朋友記得綁好塞衣服裡～樂福會給你護頸，下雨就固定帽套裡～
+項鍊或衣服會飄的，脫掉或固定好～不然被跳跳龍勾到，我們也不負責喔～
+
+<strong>【第三階段：換鞋跟戴帽關】</strong>
+第三關：換鞋跟戴安全帽關
+沒穿包鞋的朋友，換上我們的膠鞋吧～拖鞋乖乖放在水管旁邊的水泥地上～
+準備戴安全帽，帽套洗過烘過很乾淨～介意的話櫃檯可以買全新的～
+戴眼鏡的朋友先把眼鏡拿下來
+安全帽讓工作人員幫你戴，自己戴的話會像瑪利歐忘記吃香菇一樣，不太保險喔～
+頭髮收好、帽子戴好扣好，眼鏡戴回去～
+
+<strong>【第四階段：上車操作關】</strong>
+第四關：上車操作關～進出發區聽安排，不要自己選車，由前坐到後～MINI車型也聽工作人員指示喔～
+腳踩椅子，手扶方向盤或椅背，慢慢滑進去坐好～
+車子很多地方很脆弱，踩爆的話，我們是真的不負責喔～
+工作人員幫你調姿勢繫安全帶，別自己來喔～
+右腳是油門，走！左腳是煞車，停！方向盤上有你的車號～
+發動後有限速器先別踩油門～聽到叫你車號，才可以出發喔～
+
+<strong>【第五階段：賽道燈號魔王關】</strong>
+第五關：賽道燈號魔王關～出發先直走到底，看到請轉彎的帆布再右轉～
+第一圈最後一圈速度慢很正常，讓你先熟悉賽道～
+綠燈GO！繼續往前衝～黃燈代表有狀況，要減速慢行喔～
+狀況太多會全場暫停，你搗蛋的話，我們會請你先休息一下喔～
+紅燈代表結束了，過紅燈還能再開一圈～
+入口有人揮旗，撞到他的話，那真的很不好意思但也不負責喔～
+
+<strong>【第六階段：下車卸裝關】</strong>
+第六關：下車卸裝關～車子沒停好熄火前先別離開座位喔～
+也別急著脫帽或轉頭看，小心碰撞或燙到排氣管，那可不是普通的火焰花喔～
+下車跟上車一樣，手扶椅背腳踩椅子慢慢撐起來，別壓保護蓋～
+工作人員幫你解帽扣，帽套回收帽子上架～
+弄好就可以去看成績單，像看關卡分數一樣期待吧～
+
+<strong>【第七階段：安全提醒總複習】</strong>
+最終魔王關：安全提醒總複習～身體不舒服、懷孕、高血壓心臟病的朋友，真的別下場喔～
+遇到狀況別自己處理或調頭，等工作人員來救你，就像等碧姬公主的信一樣耐心～
+進彎前先減速，別重踩油門煞車，也別兩個一起踩，會像瑪利歐撞牆一樣直接彈開喔～
+煞車別一直含著開，過熱失靈的話真的很危險喔～
+撞壞車要照價賠償，自己修車的話，我們也不負責喔～
+黃燈閃黃旗揮記得減速，別撞到幫忙的工作人員喔～
+不舒服或車子怪怪的慢慢開回去，別故意擋路讓後車追撞～
+出發前可以拍照，出發時記得先離開喔～
+卡丁車不是碰碰車，故意碰撞會被限速，嚴重的話會被請離場，就像被吸進黑洞管道一樣，咻～消失喔～
+
+<strong>【結語】</strong>
+恭喜過關！謝謝你耐心聽完全部規則～也謝謝你的配合喔～
+祝你今天在樂福卡丁車，玩得像吃到無敵星星一樣開心，留下美好的回憶～`;
+
+document.getElementById('lyricsV').innerHTML = `<strong>【開場】</strong>
+哈囉哈囉～歡迎來到樂福卡丁車啦
+在你衝上賽道之前
+先跟我一起花幾分鐘，把規則搞清楚
+這樣大家玩起來才安心又爽快
+
+<strong>【第一階段：置物櫃】</strong>
+來，第一階段登場：置物櫃
+先把口袋掏一掏，手機鑰匙都拿出來
+白色櫃子不用錢，直接用
+藍色的話，投個20塊進去
+關門之後喔，記得要逆時針轉一圈，才能拿到鑰匙
+東西掉在跑道裡的話，不管是鈔票、手機還是眼鏡
+真的幫不了你，這個要先說清楚喔
+
+<strong>【第二階段：身上要注意的東西】</strong>
+第二階段來囉：身上要注意的東西
+想錄影的朋友，別自己把GoPro綁胸前或手臂上
+安全帽上有架子，沒有的話櫃檯有賣
+頭髮長的朋友記得綁好塞衣服裡
+我們會給護頸，下雨天就固定帽套裡
+項鍊、衣服會飄的東西，脫掉或固定一下
+連帽衣的帽子記得反摺進去
+
+<strong>【第三階段：換鞋戴帽這一關】</strong>
+第三階段：換鞋戴帽這一關
+沒穿包鞋的朋友，換上我們的膠鞋
+拖鞋放旁邊水泥地就好
+安全帽讓工作人員幫你戴，別自己來
+戴眼鏡的朋友，戴帽套前先拿下來
+帽套都洗過烘過了，很乾淨
+在意的話，櫃檯可以買全新的
+頭髮收好之後，工作人員幫你挑合適的帽子，扣好扣環
+眼鏡的朋友這時候戴回去
+好，準備上車吧
+
+<strong>【第四階段：上車還有怎麼開】</strong>
+第四階段：上車還有怎麼開
+進出發區聽安排，別自己挑車，由前坐到後
+MINI車型的話也聽工作人員的
+腳踩椅子，手扶方向盤或椅背，慢慢滑進去坐好
+車子有些地方蠻脆弱，小心別踩壞
+工作人員幫你調姿勢繫安全帶，這個別自己弄
+右腳油門，左腳煞車，方向盤上有你的車號
+發動後有限速器，先別踩油門
+聽到叫你車號才能出發喔
+
+<strong>【第五階段：賽道上燈號怎麼看】</strong>
+第五階段：賽道上燈號怎麼看
+出發先直走到底，看到請轉彎帆布再右轉
+第一圈跟最後一圈慢慢開很正常，讓你熟悉賽道
+綠燈可以繼續開
+黃燈代表前面有狀況，要減速慢行
+狀況太多會全場暫停，別當那個搗蛋的人
+紅燈代表結束了，過紅燈可以再開一圈
+入口有人揮旗，別撞到，慢慢開回去停好
+
+<strong>【第六階段：下車跟卸裝流程】</strong>
+第六階段：下車跟卸裝流程
+車子沒停好熄火前先別離開座位
+別急著脫帽或轉頭看，小心碰撞或燙到排氣管
+下車跟上車一樣，手扶椅背腳踩椅子撐起來，別壓保護蓋
+工作人員幫你解帽扣，帽套丟回收區，安全帽放回帽架
+弄好就可以去看成績單啦
+
+<strong>【第七階段：開車途中一定要記住的】</strong>
+最後，第七階段：開車途中一定要記住的
+身體不舒服、懷孕、高血壓心臟病的朋友，真的別下場
+遇到狀況別自己處理或調頭，等工作人員來
+進彎前先減速，別在彎裡重踩油門煞車，也別兩個一起踩，容易撞牆
+煞車別一直含著開，會過熱最後失靈，這樣很危險
+撞壞車要照價賠償，也別自己修車
+黃燈閃黃旗揮的時候記得減速，小心別撞到幫忙的工作人員
+不舒服或車子怪怪的，慢慢開回出發區，也別故意擋路讓後車追撞
+出發前可以拍照，但要出發時記得先離開
+卡丁車不是碰碰車，故意碰撞會被限速，嚴重的話可能會被請離場喔
+
+<strong>【結語】</strong>
+好啦～謝謝你耐心聽到最後
+也謝謝你的配合喔
+祝你今天在樂福卡丁車，玩得超級開心，留下美好回憶`;
+
 let funPlaying=false, vibePlaying=false;
 const aF=document.getElementById('audioFun');
 const aV=document.getElementById('audioVibe');
